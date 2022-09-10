@@ -171,7 +171,7 @@
 		\pdv{y} \max(x, y) &=
 			\begin{cases}
 				0 & \text{if } x > y \\
-				0 & \text{if } x < y
+				1 & \text{if } x < y
 			\end{cases}
 	\end{align}
 	An important property here is that the derivative for \(x = y\) is undefined as the maximum is not differentiable for \(x = y\). In practice, however, exact equality is rarely the case so this is not a real problem. Similarly a ReLU \( \max(0, x) \) works like a gradient switch where it can only pass through if the value was positive during the forward pass.
