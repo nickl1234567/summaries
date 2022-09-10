@@ -154,12 +154,12 @@
 	This exhibits some interesting properties of the gradient flow and the patterns several gates induce. First of all, an add gate distributes the gradient between the incoming paths:
 	\begin{align}
 		\pdv{x} (x + y) &= 1 &
-		\pdv{y} (y + y) &= 1
+		\pdv{y} (x + y) &= 1
 	\end{align}
 	A product gate "switches" the gradient as the first downstream gradient gets multiplied by the value of the second flow:
 	\begin{align}
 		\pdv{x} (xy) &= y &
-		\pdv{y} (xy) &= y
+		\pdv{y} (xy) &= x
 	\end{align}
 	Another interesting gate is the max gate which "routes" the gradient depending on the input values, i.e., the gradient of which the flow has the smaller variable vanishes:
 	\begin{align}
